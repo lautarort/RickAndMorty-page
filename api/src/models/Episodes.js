@@ -4,12 +4,8 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('episodes', {   
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    episode:{
-      type: DataTypes.STRING,
-    }
+   name:{
+     type: DataTypes.STRING
+   }
   });
 };

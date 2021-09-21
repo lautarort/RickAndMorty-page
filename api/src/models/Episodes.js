@@ -6,6 +6,9 @@ module.exports = (sequelize) => {
   sequelize.define('episodes', {   
    name:{
      type: DataTypes.STRING
+   },
+   episode:{
+     type: DataTypes.STRING
    }
   });
 };

@@ -19,12 +19,12 @@ const NavBar = () => {
     return (
         <NavBarContainer>
 
-            <NavBarLink to="/">
+            <NavBarLink to="/home">
                 Home
             </NavBarLink>
             <Search />
             <Order />
-            <NavBarLink to="/home">
+            <NavBarLink to="/home/create">
                 Create character
             </NavBarLink>
 

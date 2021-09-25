@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
-import { getCharacters, setName, setPage } from '../Redux/actions'
+import { getCharacters, setName, setPage,statusFilter } from '../Redux/actions'
 
 
 const SearchInput = styled.input`
@@ -24,9 +24,13 @@ function Search() {
         dispatch(setPage(1))
         setInput("")
     }
+    const filterVivo = ()=>{
+        dispatch(statusFilter("unknown"))
+    }
     return (
         <form onSubmit={onSubmit}>
             <SearchInput type="text" placeholder="Search..." onChange={handleOnChange} value={input} />
+            <button type="button" onClick={filterVivo} >unknown</button>
             <button type="submit" >🔍</button>
         </form>
     )
